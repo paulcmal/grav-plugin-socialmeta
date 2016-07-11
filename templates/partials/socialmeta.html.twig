@@ -6,7 +6,7 @@
 <meta name="og:title" property="og:title" content="{{ page.title }}" />
 {% endif %}
 {% if not page.metadata["og:description"] %}
-<meta name="og:description" property="og:description" content="{{ page.summary }}" />
+<meta name="og:description" property="og:description" content="{{ page.summary|e }}" />
 {% endif %}
 {% if not page.metadata["og:type"] %}
 <meta name="og:type" property="og:type" content="article" />
@@ -15,7 +15,7 @@
 <meta name="og:url" property="og:url" content="{{ page.url(true) }}" />
 {% endif %}
 {% if not page.metadata["og:image"] %}
-<meta name="og:image" property="og:image" content="{{ page.media.images|first.url()|absolute_url }}" />
+<meta name="og:image" property="og:image" content="{{ base_url_absolute ~ page.media.images|first.url() }}" />
 {% endif %}
 {# Twitter Cards #}
 {% if not page.metadata["twitter:card"] %}
@@ -28,8 +28,8 @@
 <meta name="twitter:title" property="twitter:title" content="{{ page.title }}" />
 {% endif %}
 {% if not page.metadata["twitter:description"] %}
-<meta name="twitter:description" property="twitter:description" content="{{ page.summary }}" />
+<meta name="twitter:description" property="twitter:description" content="{{ page.summary|e }}" />
 {% endif %}
 {% if not page.metadata["twitter:image"] %}
-<meta name="twitter:image" property="twitter:image" content="{{ page.media.images|first.url()|absolute_url }}" />
+<meta name="twitter:image" property="twitter:image" content="{{ base_url_absolute ~ page.media.images|first.url() }}" />
 {% endif %}
