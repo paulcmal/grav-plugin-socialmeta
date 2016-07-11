@@ -11,3 +11,17 @@ keywords: plugin, social, metadata, meta, seo, semantic, share
 bugs: https://github.com/paulcmla/grav-plugin-socialmeta/issues
 license: FuckProperty
 
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
