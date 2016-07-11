@@ -26,8 +26,18 @@ You need to include the `partials\socialmeta.html.twig` template ` where the `<m
 
 # Configuration
 
-SocialMeta supports [AboutMe plugin](https://github.com/Birssan/grav-plugin-about-me).
+## Overriding the defaults
 
-To add/change the Twitter defined in `twitter:site`, edit your profile in the AboutMe plugin.
+If you need specific metadata for a page, just add them to this page as recommended in the [Grav Docs](https://learn.getgrav.org/content/headers#standard-metatag-examples).
+
+SocialMeta first checks whether a metadata has been manually set before settings its default value.
+
+## Associate Twitter account
+
+SocialMeta supports [AboutMe plugin](https://github.com/Birssan/grav-plugin-about-me). To add/change the Twitter defined in `twitter:site`, edit your profile in the AboutMe plugin.
 
 Alternatively, you can manually add `<meta name="twitter:site" property="twitter:site" content="@USERNAME">` to your `<head>`. In the default [Antimatter](https://github.com/getgrav/grav-theme-antimatter), you can add it in `templates/partials/metadata.html.twig`.
+
+# Contributing
+
+If you think some of the defaults proposed are just not the best, feel free to submit ideas and pull requests.
