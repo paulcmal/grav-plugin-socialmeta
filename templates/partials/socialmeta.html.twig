@@ -1,0 +1,35 @@
+{# Open Graph #}
+{% if not page.metadata["og:sitename"] %}
+<meta name="og:site_name" property="og:site_name" content="{{ site.title }}" />
+{% endif %}
+{% if not page.metadata["og:title"] %}
+<meta name="og:title" property="og:title" content="{{ page.title }}" />
+{% endif %}
+{% if not page.metadata["og:description"] %}
+<meta name="og:description" property="og:description" content="{{ page.summary }}" />
+{% endif %}
+{% if not page.metadata["og:type"] %}
+<meta name="og:type" property="og:type" content="article" />
+{% endif %}
+{% if not page.metadata["og:url"] %}
+<meta name="og:url" property="og:url" content="{{ page.url(true) }}" />
+{% endif %}
+{% if not page.metadata["og:image"] %}
+<meta name="og:image" property="og:image" content="{{ page.media.images|first.url() }}" />
+{% endif %}
+{# Twitter Cards #}
+{% if not page.metadata["twitter:card"] %}
+<meta name="twitter:card" property="twitter:card" content="summary" />
+{% endif %}
+{% if not page.metadata["twitter:site"] and config.plugins.aboutme.social_pages.twitter.url %}
+	<meta name="twitter:site" property="twitter:site" content="@{{ config.plugins.aboutme.social_pages.twitter.url|replace('https?://twitter.com/', '') }}" />
+{% endif %}
+{% if not page.metadata["twitter:title"] %}
+<meta name="twitter:title" property="twitter:title" content="{{ page.title }}" />
+{% endif %}
+{% if not page.metadata["twitter:description"] %}
+<meta name="twitter:description" property="twitter:description" content="page.summary" />
+{% endif %}
+{% if not page.metadata["twitter:image"] %}
+<meta name="twitter:image" property="twitter:image" content="{{ page.media.images|first.url() }}" />
+{% endif %}
