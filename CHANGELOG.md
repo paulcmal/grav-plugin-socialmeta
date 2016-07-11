@@ -1,6 +1,7 @@
-# v0.0
-## 07/XX/2016
+# v0.9
+## 07/11/2016
 
 1. [](#new)
     * First Version
     * Initial Open Graph and Twitter Cards support
+    * Support AboutMe integration for `twitter:site`
