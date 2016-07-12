@@ -1,6 +1,7 @@
 name: SocialMeta
-version: 0.1
+version: 0.9.1
 description: "Automatically adds Open Graph and Twitter Cards tags to your pages."
+testing: true
 icon: user
 author:
     name: Paul Berettoni (cmal)
@@ -9,8 +10,7 @@ author:
 homepage: https://github.com/paulcmal/grav-plugin-socialmeta
 keywords: plugin, social, metadata, meta, seo, semantic, share
 bugs: https://github.com/paulcmla/grav-plugin-socialmeta/issues
-license: FuckProperty
-
+license: Fuck Property Public License
 
 form:
   validation: loose
