@@ -15,7 +15,7 @@
 <meta name="og:url" property="og:url" content="{{ page.url(true) }}" />
 {% endif %}
 {% if not page.metadata["og:image"] %}
-<meta name="og:image" property="og:image" content="{{ base_url_absolute ~ page.media.images|first.url() }}" />
+<meta name="og:image" property="og:image" content="{{ uri.base ~ (page.header.header_image ? page.media.images[page.header.header_image_file].url : page.media.images|first.url) }}" />
 {% endif %}
 {# Twitter Cards #}
 {% if not page.metadata["twitter:card"] %}
@@ -33,5 +33,5 @@
 <meta name="twitter:description" property="twitter:description" content="{{ page.summary|e }}" />
 {% endif %}
 {% if not page.metadata["twitter:image"] %}
-<meta name="twitter:image" property="twitter:image" content="{{ base_url_absolute ~ page.media.images|first.url() }}" />
+<meta name="twitter:image" property="twitter:image" content="{{ uri.base ~ (page.header.header_image ? page.media.images[page.header.header_image_file].url : page.media.images|first.url) }}" />
 {% endif %}
