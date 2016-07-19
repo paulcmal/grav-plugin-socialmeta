@@ -13,15 +13,27 @@ SocialMeta provides automatic generation of `og:` and `twitter:` tags on your pa
 
 As this plugin is not yet in the Grav repository, you need to install it manually. From your plugins folder:
 ```
-git clone https://github.com/paulcmal/grav-plugin-socialmeta
-mv grav-plugin-socialmeta socialmeta
+git clone https://github.com/paulcmal/grav-plugin-socialmeta socialmeta
 ```
+
+This will clone this repository into the socialmeta folder.
 
 # Usage
 
-You need to include the `partials\socialmeta.html.twig` template ` where the `<meta>` tags are defined. To integrate in the official Grav theme [Antimatter](https://github.com/getgrav/grav), add at the end of your `partials/metadata.html.twig`:
+You need to include the `partials\socialmeta.html.twig` template where the `<meta>` tags are defined. 
+
+## Antimatter
+
+To integrate in the official Grav theme [Antimatter](https://github.com/getgrav/grav), add at the end of your `partials/metadata.html.twig`:
 ```
-{% include 'partials/socialmeta.html.twig'; %}
+{% include 'partials/socialmeta.html.twig' %}
+```
+
+## HPSTR
+
+To integrate in the [HPSTR](https://github.com/getgrav/grav-theme-hpstr) theme, add to `partials/head.html.twig`, just after `<meta http-equiv="cleartype" content="on">`:
+```
+{% include 'partials/socialmeta.html.twig' %}
 ```
 
 # Configuration
